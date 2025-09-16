@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AquaFresh</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="main">
+    <nav class="navbar">
+        <div class="icon">
+            <h2 class="logo">AquaFresh</h2>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#features">FEATURES</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </div>
+
+        <div class="search">
+            <input class="srch" type="search" placeholder="Search...">
+            <button class="btn">Search</button>
+        </div>
+
+        <!-- Burger -->
+        <div class="burger">☰</div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="content" id="home">
+        <h1 class="animate">The freshness <br><span>of the ocean</span><br>in every drop.</h1>
+        <p class="par animate">
+            AquaFresh is not just a brand, it is a lifestyle.
+            We create products that give a feeling of purity, freshness and freedom every day.
+            We are chosen by those who value quality and inspiration in details.
+        </p>
+        <button class="cn animate"><a href="#">Join Us</a></button>
+
+        <div class="form animate">
+            <h2>Login Here</h2>
+            <input type="email" placeholder="Enter Email Here">
+            <input type="password" placeholder="Enter Password Here">
+            <button class="btnn">Login</button>
+
+            <p class="link">
+                Don't have an account?<br>
+                <a href="#">Sign up here</a>
+            </p>
+            <p class="liw">Log in with</p>
+        </div>
+    </div>
+</div>
+
+<!-- About -->
+<section id="about" class="section about">
+    <div class="container animate">
+        <h2>About Us</h2>
+        <p>
+            We are inspired by nature itself - the sea, air and freshness.
+            AquaFresh creates products that help you feel harmony
+            and recharge with energy for the whole day.
+        </p>
+    </div>
+</section>
+
+<!-- Features -->
+<section id="features" class="section features">
+    <div class="container">
+        <h2 class="animate">Why Choose AquaFresh?</h2>
+        <div class="cards">
+            <div class="card animate">
+                <h3>🌊 Natural Freshness</h3>
+                <p>Our products are designed to remind you of the sea and freedom.</p>
+            </div>
+            <div class="card animate">
+                <h3>💧 Pure Quality</h3>
+                <p>We use only environmentally friendly technologies and clean ingredients.</p>
+            </div>
+            <div class="card animate">
+                <h3>⚡ Energy & Inspiration</h3>
+                <p>Every drop of AquaFresh charges you with energy for new achievements.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="section contact">
+    <div class="container animate">
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <p>© 2025 AquaFresh. All rights reserved.</p>
+    <div class="socials">
+        <a href="#">Facebook</a> |
+        <a href="#">Instagram</a> |
+        <a href="#">Twitter</a>
+    </div>
+</footer>
+
+<script>
+    const burger = document.querySelector('.burger');
+    const menu = document.querySelector('.menu ul');
+
+    burger.addEventListener('click', () => {
+        menu.classList.toggle('active');
+    });
+
+    // Animation on scroll
+    const animatedItems = document.querySelectorAll('.animate');
+    const animateOnScroll = () => {
+        animatedItems.forEach(item => {
+            const rect = item.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 100) {
+                item.classList.add('visible');
+            }
+        });
+    };
+    window.addEventListener('scroll', animateOnScroll);
+    animateOnScroll();
+</script>
+
+</body>
+</html>
